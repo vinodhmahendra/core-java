@@ -103,5 +103,35 @@ public class Account {
 
 }
  ```
-List the three tasks  performed be the Java Platform that handdle code security
+ 
+ ```java
+ 
+package com.training.test;
+
+import com.training.model.Account;
+
+public class TestAccount {
+
+	public static void main(String[] args) {
+		Account account = new Account(100);
+		
+		account.deposit(50);
+		account.withdraw(147);
+		
+		System.out.println("Final account balance is : " + account.getBalance());
+	}
+}
+ 
+ ```
+ 
+ ```shell
+ /o1_getting_started/bin$ java com.training.test.TestAccount
+Final account balance is : 3.0
+ 
+```
+# List the three tasks  performed be the Java Platform that handle code security
+
+	1. Class Loader
+	2. Bytecode Verifier
+	3. Security Manager
 
