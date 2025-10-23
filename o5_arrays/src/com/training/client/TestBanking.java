@@ -1,14 +1,20 @@
 package com.training.client;
 
 import com.training.model.Account;
+import com.training.model.Bank;
 import com.training.model.Customer;
 
 public class TestBanking {
 
 	public static void main(String[] args) {
 		
+		Bank myBank = new Bank();
+		
 		System.out.println("Creating the customer Samarth Vishnu");
-		Customer customer= new Customer("Samarth", "Vishnu");
+		myBank.addCustomer("Samarth", "Vishnu");
+		myBank.addCustomer("Vinodh", "Kumar");
+		
+		Customer customer = myBank.getCustomer(0);
 		
 		System.out.println("Creating his account with 500.00 balance.");
 		customer.setAccount(new Account(500));
