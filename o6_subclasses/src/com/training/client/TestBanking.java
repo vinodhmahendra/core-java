@@ -42,6 +42,32 @@ public class TestBanking {
 		System.out.println("Customer ["+myBank.getCustomer(0).getFirstName()+","+
 				myBank.getCustomer(0).getLastName()+"] has a balance of "+ myBank.getCustomer(0).getAccount().getBalance());
 		
-	}
+		
+		System.out.println("Retrieving the customer Owen Bryant with his checking account with no overdraft protection");
+		System.out.println("Withdraw 150.00: "+myBank.getCustomer(1).getAccount().withdraw(150.00));
+		System.out.println("Deposit 22.50: "+myBank.getCustomer(1).getAccount().deposit(22.50));
+		System.out.println("Withdraw 47.62: "+myBank.getCustomer(1).getAccount().withdraw(47.62));
+		System.out.println("Withdraw 400.00: "+myBank.getCustomer(1).getAccount().withdraw(400.00));
+		System.out.println("Customer ["+myBank.getCustomer(1).getFirstName()+","+
+				myBank.getCustomer(1).getLastName()+"] has a balance of "+ myBank.getCustomer(1).getAccount().getBalance());
+		
+		
 
+		System.out.println("Retrieving the customer Tim Soley with his checking account that has overdraft protection");
+		System.out.println("Withdraw 150.00: "+myBank.getCustomer(2).getAccount().withdraw(150.00));
+		System.out.println("Deposit 22.50: "+myBank.getCustomer(2).getAccount().deposit(22.50));
+		System.out.println("Withdraw 47.62: "+myBank.getCustomer(2).getAccount().withdraw(47.62));
+		System.out.println("Withdraw 400.00: "+myBank.getCustomer(2).getAccount().withdraw(400.00));
+		System.out.println("Customer ["+myBank.getCustomer(2).getFirstName()+","+
+				myBank.getCustomer(2).getLastName()+"] has a balance of "+ myBank.getCustomer(2).getAccount().getBalance());
+		
+		
+		System.out.println("Retrieving the customer Maria Soley with her joint checking account with\n"
+				+ "husband Tim.");
+		System.out.println("Deposit 150: "+myBank.getCustomer(3).getAccount().deposit(150.00));
+		System.out.println("Withdraw 750.00: "+myBank.getCustomer(3).getAccount().withdraw(750.00));
+		System.out.println("Customer ["+myBank.getCustomer(3).getFirstName()+","+
+				myBank.getCustomer(3).getLastName()+"] has a balance of "+ myBank.getCustomer(3).getAccount().getBalance());
+		
+	}
 }
